@@ -1,0 +1,6 @@
+Danh sách file nộp:
++ Giao diện: layout.html
++ CSS: style.css
++ js: control.js
++ file json: layout-1fa75-default-rtdb-export.json
++ Thư mục hình ảnh: img

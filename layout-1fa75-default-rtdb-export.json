@@ -1,0 +1,12 @@
+{
+  "layout": {
+    "GAS": "OFF",
+    "humi": 63,
+    "led": "OFF",
+    "maylanh": {
+      "temp": 24
+    },
+    "pmw": "0",
+    "temp": "27"
+  }
+}

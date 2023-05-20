@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>IoT Laboratory </title>
+		<link rel="stylesheet" href="style.css">
+    
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+            crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="vendors/css/4cols.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/styles.css" /> -->
+        
+
+	</head>
+
+	<body>
+        <!-- <header>
+            <h1>SmartHome</h1>
+        </header> -->
+        <section class="main">
+            <div  class="menu ">
+                
+                <section class="room" onclick="openControl(event,'livingroom')">
+                    <img class="img-room" src="/img/livingroom.png" alt="room">
+                    <div class="content">LIVING-ROOM</div>
+                    <!-- <section class="temp-room">
+                        <div class="temp">temp</div>
+                        <div class="humi">humi</div>
+                    </section> -->
+                </section>
+
+                <section class="room" onclick="openControl(event,'bedroom'),room_active('menu_bedroom')", id="menu_bedroom">
+                    <img class="img-room" src="/img/bedroom.png" alt="room">
+                    <div class="content">BED-ROOM</div>
+                    <!-- <section class="temp-room">
+                        <div class="temp">temp</div>
+                        <div class="humi">humi</div>
+                    </section> -->
+                </section>
+
+                <section class="room" onclick="openControl(event,'kitchen')">
+                    <img class="img-room" src="/img/kitchen.jpg" alt="room">
+                    <div class="content">KITCHEN</div>
+                    <!-- <section class="temp-room">
+                        <div class="temp">temp</div>
+                        <div class="humi">humi</div>
+                    </section> -->
+                </section>
+                
+            </div>
+                <div style="background-color:rgb(255, 255, 255)" class="control" id="livingroom">
+                
+                        <section class = "sensor">
+                            <p class="name_room">LIVINGROOM</p>
+                            <img class="wifi" id="wifi" onclick="active('wifi')" src="./img/wifi.png" alt="wifi">
+                            <p class="sensor1" id="current-time"></p>
+                        </section>
+
+                    
+                        <section class="TB">
+                            <div class="left">
+                                <div class="content-temp">
+                                    <p>Hello BOSS</p>
+                                    <span id="time" class="time"></span>
+                                    <section class="temp-humi">
+                                        <div class="temp" >
+                                            <span>temp</span>
+                                            <span id="tempTB"></span>
+                                        </div>
+                                        <div class="humi" >
+                                            <span>humi</span>
+                                            <span id="humiTB"></span>
+                                        </div>
+                                    </section>
+                                </div>
+                                <img class="img_temp" src="./img/smt.png" alt="">
+                                <img class="GAS" src="./img/GAS_NO.png" alt="GAS">
+                                <img class="RING" src="./img/alarm.png" alt="RING">
+                            </div>
+                            <div class="right">
+                                <p>Devices</p>
+                                <section class="HUMI">
+                                    <img class="MAYLANH" id="maylanh" onclick="active('maylanh')" src="./img/MAYLANH.png" alt="MAYLANH">
+                                    <img class="DOWN" id="down" src="./img/giam.png" alt="DOWN">
+                                    <div class="TEMP"></div>
+                                    <img class="UP" id="up" src="./img/tang.png" alt="UP">
+                                </section>
+                                <!-- <div class="DHT11">
+                                    <img class="nhietdo" src="" alt="TEMP">
+                                    <img class="doam" src="" alt="HUMI">
+                                </div> -->
+                                <div class="light">
+                                <img class="PMW" src="./img/pmw.png" alt="LED PMW">
+                                <input id="myRange" type="range" max="10" min="0" value="0" class="slider">
+                                </div>
+                                <img class="LED"  id="LED" src="./img/den.png" alt="LED">
+                                
+                        </section>
+                </div>
+                
+            </div>
+            <div style="background-color:rgb(255, 255, 255)" class="control"  id="bedroom">
+                
+                    <section class = "sensor">
+                        <p class="name_room">BEDROOM</p>
+                        <img class="wifi" id="wifi2" onclick="active('wifi2')" src="./img/wifi.png" alt="wifi">
+                        <p class="sensor1">sensor</p>
+                        
+                        
+                    </section>
+                    <section class="TB">
+                        <img class="GAS" src="./img/GAS_NO.png" alt="GAS">
+                        <section class="HUMI">
+                            <img class="MAYLANH" id="maylanh2" onclick="active('maylanh2')" src="./img/MAYLANH.png" alt="MAYLANH">
+                            <img class="DOWN" src="./img/giam.png" alt="DOWN">
+                            <div class="TEMP"></div>
+                            <img class="UP" src="./img/tang.png" alt="UP">
+                        </section>
+                        <div class="DHT11">
+                            <img class="nhietdo" src="" alt="TEMP">
+                            <img class="doam" src="" alt="HUMI">
+                        </div>
+                        <div class="light">
+                        <img class="PMW" src="./img/pmw.png" alt="LED PMW">
+                        <input type="range" max="10" min="0" value="0" class="slider">
+                         </div>
+                        <img class="LED" onclick="active('LED2')" id="LED2" src="./img/den.png" alt="LED">
+                        <img class="RING" src="./img/alarm.png" alt="RING">
+                    </section>
+                
+            </div>
+            <div style="background-color:rgb(255, 255, 255)" class="control"  id="kitchen">
+                
+                    <section class = "sensor">
+                        <p class="name_room">KITCHEN</p>
+                        <img class="wifi" onclick="active('wifi3')" id="wifi3" src="./img/wifi.png" alt="wifi">
+                        <p class="sensor1">sensor</p>
+                        
+                        
+                    </section>
+                    <section class="TB">
+                        <img class="GAS" src="./img/GAS_NO.png" alt="GAS">
+                        <section class="HUMI">
+                            <img class="MAYLANH" onclick="active('maylanh3')" id="maylanh3" src="./img/MAYLANH.png" alt="MAYLANH">
+                            <img class="DOWN" src="./img/giam.png" alt="DOWN">
+                            <div class="TEMP"></div>
+                            <img class="UP" src="./img/tang.png" alt="UP">
+                        </section>
+                        <div class="DHT11">
+                            <img class="nhietdo" src="" alt="TEMP">
+                            <img class="doam" src="" alt="HUMI">
+                        </div>
+                        <div class="light">
+                        <img class="PMW" src="./img/pmw.png" alt="LED PMW">
+                        <input type="range" max="10" min="0" value="0" class="slider">
+                         </div>
+                        <img class="LED" onclick="active('LED3')" id="LED3" src="./img/den.png" alt="LED">
+                        <img class="RING" src="./img/alarm.png" alt="RING">
+                    </section>
+                
+            </div>
+        </section>
+        
+		<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script> 
+		<script src="control.js"></script>
+
+	</body>	
+
+</html>
